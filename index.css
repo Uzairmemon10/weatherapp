@@ -1,0 +1,148 @@
+.container{
+ /* width: 100%; */
+ overflow-x: hidden;
+ height: 100vh;
+ 
+}
+.head {
+    text-align: center;
+    animation-name: uzair;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes uzair {
+
+    0% {
+        color: yellow;
+        transform: scale(1);
+    }
+
+    20% {
+        color: blue;
+        transform: scale(1.1);
+    }
+
+    40% {
+        color: red;
+        transform: scale(1);
+    }
+
+    60% {
+        color: purple;
+        transform: scale(1.1);
+    }
+
+    80% {
+        color: brown;
+    }
+
+    100% {
+        color: black;
+    }
+
+}
+
+
+.parent {
+    margin-left: 35%;
+    border-radius: 25px;
+    border: solid 2px black;
+    width: 30%;
+    height: 500px;
+    text-align: center;
+    background: url(pexels-pixabay-209831.jpg) no-repeat center center/cover;
+    box-shadow: 1px -1px 10px 5px black;
+}
+
+.parent input {
+    padding: 10px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-radius: 50px;
+    color: white;
+    background-color: black;
+    outline: none;
+}
+
+button {
+    color: white;
+    background-color: black;
+    /* margin-left: 20px;    */
+    padding: 10px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 70px;
+    outline: none;
+    animation-name: button;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes button {
+    0% {
+        transform: scale(1);
+        border-color: gray;
+    }
+
+    15% {
+        transform: scale(1.1);
+    border-color: blue;
+    }
+
+    30% {
+        transform: scale(1);
+    border-color: green;
+    }
+
+    45% {
+        transform: scale(1.1);
+    }
+    100%{
+       border-color: grey; 
+    }
+}
+
+img {
+    width: 200px;
+    height: 150px;
+    margin-top: 30px;
+}
+#weathername{
+ text-transform: uppercase;
+ font-size: 20px;
+ color: white;   
+}
+.forc {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.forhumanity {
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: left;
+    color: white;
+    font-size: 25px
+}
+
+.wind {
+    /* margin-left: 210px;
+    margin-top: -30px; */
+    color: white;
+    font-size: 25px;
+}
+#centi{
+color: black;
+font-size: 30px;
+}
+.container2{
+    display: flex;
+    justify-content: space-around;
+}
