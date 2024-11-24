@@ -1,9 +1,10 @@
-.container{
- /* width: 100%; */
- overflow-x: hidden;
- height: 100vh;
- 
+.container {
+    /* width: 100%; */
+    overflow-x: hidden;
+    height: 100vh;
+
 }
+
 .head {
     text-align: center;
     animation-name: uzair;
@@ -92,19 +93,20 @@ button {
 
     15% {
         transform: scale(1.1);
-    border-color: blue;
+        border-color: blue;
     }
 
     30% {
         transform: scale(1);
-    border-color: green;
+        border-color: green;
     }
 
     45% {
         transform: scale(1.1);
     }
-    100%{
-       border-color: grey; 
+
+    100% {
+        border-color: grey;
     }
 }
 
@@ -113,19 +115,16 @@ img {
     height: 150px;
     margin-top: 30px;
 }
-#weathername{
- text-transform: uppercase;
- font-size: 20px;
- color: white;   
-}
-.forc {
+
+#weathernamee {
     text-transform: uppercase;
-    font-size: 25px;
-    font-weight: 800;
+    font-size: 20px;
+    color: white;
 }
 
+
 .forhumanity {
-    margin-top: 20px;
+    margin-top: 120px;
     margin-left: 20px;
     text-align: left;
     color: white;
@@ -138,11 +137,142 @@ img {
     color: white;
     font-size: 25px;
 }
-#centi{
-color: black;
-font-size: 30px;
+
+#centi {
+    color: black;
+    font-size: 30px;
 }
-.container2{
+
+.container2 {
     display: flex;
     justify-content: space-around;
+}
+@media only screen and (min-width:320px) and (max-width:361px) {
+    .parent {
+        margin-left: 15px;
+        border-radius: 25px;
+        border: solid 2px black;
+        width: 90%;
+        height: 550px;
+        text-align: center;
+        background: url(pexels-pixabay-209831.jpg) no-repeat center center/cover;
+        box-shadow: 1px -1px 10px 5px black;
+ 
+    }
+
+    .forhumanity {
+        margin-top: 120px;
+        margin-left: 20px;
+        text-align: left;
+        color: white;
+        font-size: 15px
+    }
+    #humidity{
+     font-size: 20px;
+     color: black;   
+    }
+    .wind {
+        /* margin-left: 210px;
+        margin-top: -30px; */
+        color:white;
+        font-size: 25px;
+    }
+    
+}
+@media only screen and (max-width:540px) {
+
+    .parent {
+        margin-left: 15px;
+        border-radius: 25px;
+        border: solid 2px black;
+        width: 90%;
+        height: 550px;
+        text-align: center;
+        background: url(pexels-pixabay-209831.jpg) no-repeat center center/cover;
+        box-shadow: 1px -1px 10px 5px black;
+    }
+    .forhumanity {
+        margin-top: 20px;
+        margin-left: 20px;
+        text-align: left;
+        color: white;
+        font-size: 25px
+    }
+
+}
+
+
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+
+    .parent {
+        margin-left: 120px;
+        border-radius: 25px;
+        border: solid 2px black;
+        width: 50%;
+        height: 800px;
+        text-align: center;
+        background: url(pexels-pixabay-209831.jpg) no-repeat center center/cover;
+        box-shadow: 1px -1px 10px 5px black;
+    }
+
+    .parent input {
+        padding: 10px;
+        margin-top: 40px;
+        text-align: center;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 900;
+        border-radius: 50px;
+        color: white;
+        background-color: black;
+        outline: none;
+    }
+
+    button {
+        /* margin-left: 20px;    */
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    #weathernamee {
+        font-size: 30px;
+    }
+
+
+    .forhumanity {
+        margin-top: 20px;
+        margin-left: 20px;
+        text-align: left;
+        color: white;
+        font-size: 25px
+    }
+
+    .wind {
+        /* margin-left: 210px; */
+        /* margin-top: 30px;  */
+        color: white;
+        font-size: 25px;
+    }
+
+    #centi {
+        color: white;
+        font-size: 30px;
+        margin-top: 60px;
+    }
+
+    .container2 {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width:1024px) and (max-width:1025px) {
+
+
+    .parent {
+        margin-left: 240px;
+    }
+
 }
