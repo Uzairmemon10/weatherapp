@@ -37,29 +37,36 @@ function checkweather(cityname) {
         )
         .then((response) => {
             console.log(response)
-           weathernamee.innerHTML=response.weather[0].main;
-            centi.innerHTML=Math.round(response.main.temp)+"°C"
-            humidity.innerHTML=response.main.humidity+"%"
-            wind.innerHTML=response.wind.speed+"kmph"
-            citynames.innerHTML=response.name;
-            if(response.weather[0].main == "Clouds"){
-                img.src="cloudy-1-day.svg"
+            if (!response.ok){
+              alert("invalid city")  
             }
-            else if(response.weather[0].main =="Rain"){
-                img.src="rainy-3.svg"
-            }
-            else if(response.weather[0].main == "Mist"){
-                img.src="fog.svg"
-            }
-             else if(response.weather[0].main == "Drizzle"){
-                img.src="drizle.svg"
-            }
-            else if(response.weather[0].main == "Clear"){
-                img.src="clear-day.svg"
-            }
-            else if(response.weather[0].main=="Smoke"){
-                img.src="wind.svg"
-            }
+            else{ weathernamee.innerHTML=response.weather[0].main;
+                centi.innerHTML=Math.round(response.main.temp)+"°C"
+                humidity.innerHTML=response.main.humidity+"%"
+                wind.innerHTML=response.wind.speed+"kmph"
+                citynames.innerHTML=response.name;
+                if(response.weather[0].main == "Clouds"){
+                    img.src="cloudy-1-day.svg"
+                }
+                else if(response.weather[0].main =="Rain"){
+                    img.src="rainy-3.svg"
+                }
+                else if(response.weather[0].main == "Mist"){
+                    img.src="fog.svg"
+                }
+                 else if(response.weather[0].main == "Drizzle"){
+                    img.src="drizle.svg"
+                }
+                else if(response.weather[0].main == "Clear"){
+                    img.src="clear-day.svg"
+                }
+                else if(response.weather[0].main=="Smoke"){
+                    img.src="wind.svg"
+                }
+                else if(response.weather[0].main=="Snow"){
+                    img.src="snowy-3.svg"
+                }}
+          
              })
         .catch((err)=>{
 console.log(err)
