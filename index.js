@@ -32,15 +32,15 @@ function checkweather(cityname) {
     let API_key = "1bb8c0beecf074b8871033e7d4dd535f"
     let apiUrl = (`https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${API_key}&units=metric`)
     fetch(apiUrl)
-        .then((response) => 
-            response.json()
-        )
+        .then((response) => {
+            if(!response.ok){
+                alert("invalid city")
+            }
+            return response.json()
+        })
         .then((response) => {
             console.log(response)
-            if (!response.ok){
-              alert("invalid city")  
-            }
-            else{ weathernamee.innerHTML=response.weather[0].main;
+             weathernamee.innerHTML=response.weather[0].main;
                 centi.innerHTML=Math.round(response.main.temp)+"°C"
                 humidity.innerHTML=response.main.humidity+"%"
                 wind.innerHTML=response.wind.speed+"kmph"
@@ -65,7 +65,7 @@ function checkweather(cityname) {
                 }
                 else if(response.weather[0].main=="Snow"){
                     img.src="snowy-3.svg"
-                }}
+                }
           
              })
         .catch((err)=>{
